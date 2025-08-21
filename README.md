@@ -18,7 +18,14 @@ pip install -r requirements.txt
 ### 2. 运行服务器
 
 ```bash
+# 方式1: 直接运行（前台模式）
 python ftp_server.py
+
+# 方式2: 后台运行（推荐，电脑睡眠后自动重连）
+./run.sh
+
+# 停止后台运行的服务器
+./stop.sh
 ```
 
 ### 3. 电视机连接
@@ -35,11 +42,13 @@ python ftp_server.py
 ftp-movie-server/
 ├── ftp_server.py      # 主服务器文件
 ├── config.py          # 配置文件
-├── start.py          # 交互式启动脚本
-├── run.sh            # 一键启动脚本
-├── requirements.txt   # 依赖包
-├── movies/           # 备用文件夹
-└── README.md         # 说明文档
+├── start.py           # 交互式启动脚本
+├── run.sh             # 后台启动脚本
+├── stop.sh            # 停止服务脚本
+├── logs/              # 日志文件夹
+├── requirements.txt    # 依赖包
+├── movies/            # 备用文件夹
+└── README.md          # 说明文档
 ```
 
 ## 📂 支持的文件夹
@@ -70,6 +79,8 @@ ftp-movie-server/
 - ✅ **被动模式传输** - 适合电视机连接
 - ✅ **多设备同时连接**
 - ✅ **实时连接状态显示**
+- ✅ **自动重连机制** - 电脑睡眠后自动恢复连接
+- ✅ **后台运行支持** - 终端关闭后继续运行
 
 ## 📺 支持的设备
 
@@ -123,14 +134,21 @@ ZIP, RAR, 7Z, TAR, GZ, BZ2, XZ
 - 检查文件权限
 - 尝试管理员账户登录
 
+### 电脑睡眠后连接断开
+
+- 使用 `./run.sh` 启动服务器，启用自动重连功能
+- 服务器会在检测到网络中断后自动尝试重连
+- 日志文件保存在 `logs/ftp_server.log`
+
 ## 📝 使用提示
 
 1. **文件访问**: 服务器自动共享 Downloads 文件夹
 2. **网络**: 确保所有设备连接同一 WiFi
 3. **格式**: 支持所有文件类型，无限制
 4. **下载**: 直接下载文件到 Downloads 即可通过 FTP 访问
+5. **后台运行**: 使用 `./run.sh` 启动服务，`./stop.sh` 停止服务
+6. **日志查看**: 使用 `tail -f logs/ftp_server.log` 查看实时日志
 
 ## 🛡️ 安全说明
 
 此 FTP 服务器仅适用于家庭局域网环境，请勿暴露到公网。
-# ftp-movies

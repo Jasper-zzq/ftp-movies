@@ -3,11 +3,14 @@
 """
 本地局域网FTP文件服务器
 支持电视机直连访问Downloads文件夹中的所有文件
+增加自动重连机制，防止电脑睡眠后连接断开
 """
 
 import os
 import sys
 import socket
+import time
+import threading
 from pyftpdlib.authorizers import DummyAuthorizer
 from pyftpdlib.handlers import FTPHandler
 from pyftpdlib.servers import FTPServer
@@ -28,6 +31,10 @@ except ImportError:
     PASSIVE_PORTS_START = 60000
     PASSIVE_PORTS_END = 65535
     ALLOW_ALL_FILES = True
+
+# 全局变量，用于控制服务器状态
+server_running = True
+server_instance = None
 
 
 class FileFTPHandler(FTPHandler):
@@ -258,17 +265,75 @@ def setup_ftp_server():
     return server, share_path, wifi_ip
 
 
+def check_connection():
+    """检查网络连接状态"""
+    try:
+        # 尝试连接Google DNS服务器
+        socket.create_connection(("8.8.8.8", 53), timeout=3)
+        return True
+    except OSError:
+        return False
+
+
+def connection_monitor(server):
+    """监控网络连接状态，在网络中断后尝试重连"""
+    global server_running, server_instance
+
+    print("🔍 启动网络连接监控线程")
+
+    while server_running:
+        time.sleep(10)  # 每10秒检查一次
+
+        if not check_connection():
+            print("⚠️ 检测到网络连接中断，可能是电脑睡眠导致")
+            # 等待网络恢复
+            reconnect_attempts = 0
+            while server_running and reconnect_attempts < 30:  # 最多尝试30次，约5分钟
+                time.sleep(10)
+                reconnect_attempts += 1
+
+                if check_connection():
+                    print("✅ 网络连接已恢复")
+
+                    try:
+                        # 尝试重新启动服务器
+                        if server_instance:
+                            try:
+                                server_instance.close_all()
+                            except:
+                                pass
+
+                        print("🔄 正在重启FTP服务器...")
+                        new_server, share_path, local_ip = setup_ftp_server()
+                        server_instance = new_server
+
+                        # 在新线程中启动服务器
+                        server_thread = threading.Thread(
+                            target=new_server.serve_forever
+                        )
+                        server_thread.daemon = True
+                        server_thread.start()
+
+                        print(f"✅ FTP服务器已重启，运行在 {local_ip}:{FTP_PORT}")
+                        break
+                    except Exception as e:
+                        print(f"❌ 重启FTP服务器失败: {e}")
+                else:
+                    if reconnect_attempts % 6 == 0:  # 每分钟输出一次
+                        print(f"⏳ 等待网络恢复... (已尝试 {reconnect_attempts} 次)")
+
+
 def main():
     """主函数"""
+    global server_running, server_instance
+
     print("📁 本地局域网FTP文件服务器启动中...")
     print("=" * 50)
 
     try:
         # 设置FTP服务器
         server, share_path, local_ip = setup_ftp_server()
-
-        # 获取本机IP
-        # local_ip = get_local_ip() # This line is now redundant as local_ip is passed from setup_ftp_server
+        server_instance = server
 
         print("\n✅ FTP服务器配置完成!")
         print(f"📍 服务器地址: {local_ip}:{FTP_PORT}")
@@ -292,8 +357,14 @@ def main():
         print("  • 支持所有文件类型")
         print("  • 按 Ctrl+C 停止服务器")
         print("  • 可编辑 config.py 自定义设置")
+        print("  • 自动重连功能已启用，电脑睡眠后会自动恢复连接")
         print("=" * 50)
         print(f"🚀 FTP服务器正在运行在 {local_ip}:{FTP_PORT}")
+
+        # 启动网络监控线程
+        monitor_thread = threading.Thread(target=connection_monitor, args=(server,))
+        monitor_thread.daemon = True
+        monitor_thread.start()
 
         # 启动服务器
         server.serve_forever()
@@ -313,9 +384,11 @@ def main():
         sys.exit(1)
     except KeyboardInterrupt:
         print("\n\n🛑 服务器已停止")
+        server_running = False
         sys.exit(0)
     except Exception as e:
         print(f"❌ 未知错误: {e}")
+        server_running = False
         sys.exit(1)
 
 
