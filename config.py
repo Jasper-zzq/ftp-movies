@@ -8,7 +8,7 @@ import os
 
 # 服务器配置
 FTP_PORT = 2121  # FTP端口（避免权限问题，使用2121）
-DOWNLOADS_PATH = os.path.expanduser("~/Downloads")  # 用户Downloads文件夹
+DOWNLOADS_PATH = os.path.expanduser("~/Downloads/ftp")  # 用户Downloads/ftp文件夹
 MOVIES_PATH = "./movies"  # 备用电影文件夹（如果Downloads不存在）
 
 # 用户配置

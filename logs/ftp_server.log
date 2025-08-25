@@ -1,0 +1,84 @@
+[I 2025-08-21 19:41:47] concurrency model: async
+[I 2025-08-21 19:41:47] masquerade (NAT) address: None
+[I 2025-08-21 19:41:47] passive ports: 60000->65534
+[I 2025-08-21 19:41:47] >>> starting FTP server on 192.168.10.31:2121, pid=77862 <<<
+[I 2025-08-21 19:44:20] 192.168.10.34:47167-[] FTP session opened (connect)
+[I 2025-08-21 19:44:20] 192.168.10.34:47167-[anonymous] USER 'anonymous' logged in.
+[I 2025-08-21 19:44:22] 192.168.10.34:47167-[anonymous] CWD /Users/zzqjasper/Downloads/ftp 250
+[I 2025-08-21 19:44:31] 192.168.10.34:36169-[] FTP session opened (connect)
+[I 2025-08-21 19:44:31] 192.168.10.34:36169-[anonymous] USER 'anonymous' logged in.
+[I 2025-08-21 19:44:31] 192.168.10.34:36169-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/12.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=353608 seconds=0.033
+[I 2025-08-21 19:44:31] 192.168.10.34:36169-[anonymous] Transfer aborted via ABOR.
+[I 2025-08-21 19:44:31] 192.168.10.34:36169-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/12.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=1 bytes=2253750 seconds=0.134
+[I 2025-08-21 19:44:32] 192.168.10.34:36173-[] FTP session opened (connect)
+[I 2025-08-21 19:44:32] 192.168.10.34:36173-[anonymous] USER 'anonymous' logged in.
+[I 2025-08-21 19:44:32] 192.168.10.34:36173-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/12.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=143352 seconds=0.066
+[I 2025-08-21 19:44:33] 192.168.10.34:36173-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/12.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=1 bytes=2253750 seconds=0.903
+[I 2025-08-21 19:44:34] 192.168.10.34:36173-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/12.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=175208 seconds=0.261
+[I 2025-08-21 19:44:34] 192.168.10.34:36173-[anonymous] FTP session closed (disconnect).
+[I 2025-08-21 19:46:10] 192.168.10.34:36169-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/12.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=71378016 seconds=98.493
+[I 2025-08-21 19:46:10] 192.168.10.34:36169-[anonymous] FTP session closed (disconnect).
+[I 2025-08-21 19:46:15] 192.168.10.34:36186-[] FTP session opened (connect)
+[I 2025-08-21 19:46:15] 192.168.10.34:36186-[anonymous] USER 'anonymous' logged in.
+[I 2025-08-21 19:46:15] 192.168.10.34:36186-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/13.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=141904 seconds=0.007
+[I 2025-08-21 19:46:15] 192.168.10.34:36186-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/13.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=1 bytes=2274422 seconds=0.133
+[I 2025-08-21 19:46:16] 192.168.10.34:36186-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/13.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=1097680 seconds=0.143
+[I 2025-08-21 19:46:16] 192.168.10.34:36186-[anonymous] Transfer aborted via ABOR.
+[I 2025-08-21 19:46:16] 192.168.10.34:36190-[] FTP session opened (connect)
+[I 2025-08-21 19:46:16] 192.168.10.34:36190-[anonymous] USER 'anonymous' logged in.
+[I 2025-08-21 19:46:16] 192.168.10.34:36190-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/13.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=143352 seconds=0.101
+[I 2025-08-21 19:46:17] 192.168.10.34:36190-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/13.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=1 bytes=2274422 seconds=0.883
+[I 2025-08-21 19:46:18] 192.168.10.34:36190-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/13.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=175208 seconds=0.258
+[I 2025-08-21 19:46:18] 192.168.10.34:36190-[anonymous] FTP session closed (disconnect).
+[I 2025-08-21 19:51:12] 192.168.10.34:47167-[anonymous] Control connection timed out.
+[I 2025-08-21 19:51:12] 192.168.10.34:47167-[anonymous] FTP session closed (disconnect).
+[I 2025-08-21 20:15:17] 192.168.10.34:36186-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/13.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=559048134 seconds=1593.949
+[I 2025-08-21 20:15:17] 192.168.10.34:36186-[anonymous] FTP session closed (disconnect).
+[I 2025-08-21 20:38:54] 192.168.10.34:36818-[] FTP session opened (connect)
+[I 2025-08-21 20:38:54] 192.168.10.34:36818-[anonymous] USER 'anonymous' logged in.
+[I 2025-08-21 20:38:58] 192.168.10.34:36818-[anonymous] FTP session closed (disconnect).
+[I 2025-08-21 20:38:59] 192.168.10.34:56477-[] FTP session opened (connect)
+[I 2025-08-21 20:38:59] 192.168.10.34:56477-[anonymous] USER 'anonymous' logged in.
+[I 2025-08-21 20:39:08] 192.168.10.34:53029-[] FTP session opened (connect)
+[I 2025-08-21 20:39:08] 192.168.10.34:53029-[anonymous] USER 'anonymous' logged in.
+[I 2025-08-21 20:39:08] 192.168.10.34:53029-[anonymous] RETR /Users/zzqjasper/Downloads/11.1080p.HD国语中字无水印[最新电影www.5266ys.com].mkv completed=0 bytes=189192 seconds=0.026
+[I 2025-08-21 20:39:08] 192.168.10.34:53029-[anonymous] Transfer aborted via ABOR.
+[I 2025-08-21 20:39:08] 192.168.10.34:53029-[anonymous] RETR /Users/zzqjasper/Downloads/11.1080p.HD国语中字无水印[最新电影www.5266ys.com].mkv completed=1 bytes=700 seconds=0.014
+[I 2025-08-21 20:39:08] 192.168.10.34:53029-[anonymous] RETR /Users/zzqjasper/Downloads/11.1080p.HD国语中字无水印[最新电影www.5266ys.com].mkv completed=0 bytes=1166657 seconds=0.184
+[I 2025-08-21 20:39:08] 192.168.10.34:53029-[anonymous] Transfer aborted via ABOR.
+[I 2025-08-21 20:39:08] 192.168.10.34:53033-[] FTP session opened (connect)
+[I 2025-08-21 20:39:08] 192.168.10.34:53033-[anonymous] USER 'anonymous' logged in.
+[I 2025-08-21 20:39:08] 192.168.10.34:53029-[anonymous] RETR /Users/zzqjasper/Downloads/11.1080p.HD国语中字无水印[最新电影www.5266ys.com].mkv completed=1 bytes=19974 seconds=0.005
+[I 2025-08-21 20:39:09] 192.168.10.34:53033-[anonymous] RETR /Users/zzqjasper/Downloads/11.1080p.HD国语中字无水印[最新电影www.5266ys.com].mkv completed=0 bytes=146248 seconds=0.04
+[I 2025-08-21 20:39:09] 192.168.10.34:53033-[anonymous] Transfer aborted via ABOR.
+[I 2025-08-21 20:39:09] 192.168.10.34:53033-[anonymous] RETR /Users/zzqjasper/Downloads/11.1080p.HD国语中字无水印[最新电影www.5266ys.com].mkv completed=1 bytes=700 seconds=0.104
+[I 2025-08-21 20:39:10] 192.168.10.34:53033-[anonymous] RETR /Users/zzqjasper/Downloads/11.1080p.HD国语中字无水印[最新电影www.5266ys.com].mkv completed=0 bytes=146833 seconds=0.385
+[I 2025-08-21 20:39:10] 192.168.10.34:53033-[anonymous] FTP session closed (disconnect).
+[I 2025-08-21 20:39:12] 192.168.10.34:53029-[anonymous] RETR /Users/zzqjasper/Downloads/11.1080p.HD国语中字无水印[最新电影www.5266ys.com].mkv completed=0 bytes=29389920 seconds=3.708
+[I 2025-08-21 20:39:12] 192.168.10.34:53029-[anonymous] FTP session closed (disconnect).
+[I 2025-08-21 20:39:24] 192.168.10.34:56477-[anonymous] CWD /Users/zzqjasper/Downloads/debiaow.com_apache 250
+[I 2025-08-21 20:49:05] 192.168.10.34:56477-[anonymous] CWD /Users/zzqjasper/Downloads/ftp 250
+[I 2025-08-21 20:49:11] 192.168.10.34:53075-[] FTP session opened (connect)
+[I 2025-08-21 20:49:11] 192.168.10.34:53075-[anonymous] USER 'anonymous' logged in.
+[I 2025-08-21 20:49:11] 192.168.10.34:53075-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/14.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=146248 seconds=0.012
+[I 2025-08-21 20:49:11] 192.168.10.34:53075-[anonymous] Transfer aborted via ABOR.
+[I 2025-08-21 20:49:12] 192.168.10.34:53075-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/14.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=1 bytes=2278050 seconds=0.154
+[I 2025-08-21 20:49:12] 192.168.10.34:53079-[] FTP session opened (connect)
+[I 2025-08-21 20:49:12] 192.168.10.34:53079-[anonymous] USER 'anonymous' logged in.
+[I 2025-08-21 20:49:13] 192.168.10.34:53079-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/14.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=131072 seconds=0.099
+[I 2025-08-21 20:49:13] 192.168.10.34:53079-[anonymous] Transfer aborted via ABOR.
+[I 2025-08-21 20:49:14] 192.168.10.34:53075-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/14.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=19201040 seconds=1.883
+[I 2025-08-21 20:49:14] 192.168.10.34:53075-[anonymous] Transfer aborted via ABOR.
+[I 2025-08-21 20:49:14] 192.168.10.34:53079-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/14.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=1 bytes=2278050 seconds=0.49
+[I 2025-08-21 20:49:14] 192.168.10.34:53075-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/14.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=2202674 seconds=0.287
+[I 2025-08-21 20:49:14] 192.168.10.34:53075-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/14.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=1861308 seconds=0.102
+[I 2025-08-21 20:49:14] 192.168.10.34:53075-[anonymous] Transfer aborted via ABOR.
+[I 2025-08-21 20:49:15] 192.168.10.34:53075-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/14.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=1255313 seconds=0.122
+[I 2025-08-21 20:49:15] 192.168.10.34:53079-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/14.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=871176 seconds=0.154
+[I 2025-08-21 20:49:15] 192.168.10.34:53079-[anonymous] FTP session closed (disconnect).
+[I 2025-08-21 20:54:11] 192.168.10.34:56477-[anonymous] Control connection timed out.
+[I 2025-08-21 20:54:11] 192.168.10.34:56477-[anonymous] FTP session closed (disconnect).
+[I 2025-08-21 21:28:22] 192.168.10.34:53075-[anonymous] RETR /Users/zzqjasper/Downloads/ftp/14.1080p.HD国语中字无水印[最新电影www.5266ys.com].mp4 completed=0 bytes=374483182 seconds=1193.262
+[I 2025-08-21 21:29:19] 192.168.10.34:53075-[anonymous] FTP session closed (disconnect).
+/opt/homebrew/Cellar/python@3.13/3.13.1/Frameworks/Python.framework/Versions/3.13/lib/python3.13/multiprocessing/resource_tracker.py:276: UserWarning: resource_tracker: There appear to be 6 leaked semaphore objects to clean up at shutdown: {'/mp-jxbbz259', '/mp-y267pdaw', '/mp-aqt6aw37', '/mp-f2n3lz15', '/mp-7d0vrdnb', '/mp-nbre6f2t'}
+  warnings.warn(
